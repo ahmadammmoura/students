@@ -34,4 +34,20 @@ app.get("/students", (req, res) =>{
   console.log(idparam)
   res.send(obj);
   });
+
+  app.use(express.json());
+  
+
+  app.post("/students",( request , response ) => {
+    
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    
+    console.log(request.body)
+
+  });
+
+
+
+
   app.listen(4000);
